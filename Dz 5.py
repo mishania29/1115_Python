@@ -37,20 +37,20 @@ class Human:
 
     def cleaning(self):
         print("Я вбираюся")
-        self.house.pollution -= random.randint(3, 7)
+        self.house.pollution -= random.randint(1, 3)
     def general_cleaning(self):
         ClChoice = random.randint(1, 2)
         if ClChoice == 1:
             print("Я роблю генеральне прибрання")
-            self.house.pollution == random.randint(1, 3)
+            self.house.pollution -= random.randint(2, 6)
         elif ClChoice == 2:
             if self.money >= 50:
                 print("Я найняв прибиральника")
-                self.house.pollution == 0
+                self.house.pollution -= random.randint(3, 7)
                 self.money -= 25
             else:
                 print("Я роблю генеральне прибрання")
-                self.house.pollution == 3
+                self.house.pollution -= random.randint(2, 6)
 
     def info(self):
         print(f"Гроші - $ {self.money}")
